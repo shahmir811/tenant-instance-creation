@@ -14,9 +14,9 @@ const TopAppBar = () => {
 	};
 
 	return (
-		<Box sx={{ flexGrow: 1 }} style={{ marginBottom: '50px' }}>
+		<Box sx={{ flexGrow: 1 }} style={{ marginBottom: '12px' }}>
 			<AppBar position='static' style={{ background: '#123034' }}>
-				<Toolbar>
+				<Toolbar variant="dense">
 					<Typography variant='h6' component='div' sx={{ flexGrow: 1 }}>
 						Instance Creation
 					</Typography>
