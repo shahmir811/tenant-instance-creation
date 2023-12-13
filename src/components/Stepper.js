@@ -7,6 +7,7 @@ import CompanySetup from './CompanySetup/CompanySetup';
 import PropertyApplicationSubscription from './PropertyApplicationSubscription/PropertyApplicationSubscription';
 import PropertySetup from './PropertySetup/PropertySetup';
 import ReplicateDelinquency from './ReplicateDelinquency/ReplicateDelinquency';
+import Container from "@mui/material/Container";
 
 const StepperComponent = () => {
 	const [activeStep, setActiveStep] = useState(0);
@@ -45,12 +46,13 @@ const StepperComponent = () => {
 	};
 
 	return (
-		<div>
-			<Stepper alternativeLabel activeStep={activeStep}>
+		<Container component={"main"} maxWidth={"lg"}>
+			<Stepper alternativeLabel activeStep={activeStep} >
 				{[1, 2, 3, 4, 5].map((step, index) => (
 					<Step key={step}>
 						<StepLabel>
 							<Button
+								size={"small"}
 								style={{
 									backgroundColor: activeStep === index ? '#47979E' : '',
 									color: activeStep === index ? 'white' : '',
@@ -64,7 +66,7 @@ const StepperComponent = () => {
 			</Stepper>
 
 			{renderStepContent()}
-		</div>
+		</Container>
 	);
 };
 
